@@ -41,41 +41,75 @@ var initial_font_size = 20;
 const increaseBtn = document.getElementById("increase_font");
 const decreaseBtn = document.getElementById("decrease_font");
 
+const previousButton = document.getElementById("previous_btn");
+const nextButton = document.getElementById("next_btn");
+const randomButton = document.getElementById("random_btn");
+current_index = 0;
+
 initial_category = 'science';
 
 
-const show_the_quote = () => {
+const show_the_quote = (i) => {
 
     myquote.style.fontSize = `${initial_font_size}px`;
     author.style.fontSize = `${initial_font_size}px`;
 
-    myquote.innerHTML = quotes[initial_category][0].quote;
-    author.innerHTML = "-" + quotes[initial_category][0].author + "-";
+    myquote.innerHTML = quotes[initial_category][i].quote;
+    author.innerHTML = "-" + quotes[initial_category][i].author + "-";
 
 
 }
 
-show_the_quote();
+show_the_quote(current_index);
 
 
 categorychange.addEventListener('change', () => {
     initial_category = categorychange.value;
-    show_the_quote()
+    show_the_quote(current_index)
 
 })
 
 increaseBtn.addEventListener('click', () => {
 
     initial_font_size += 1;
-    show_the_quote()
+    show_the_quote(current_index)
 
 
 })
 
 decreaseBtn.addEventListener('click', () => {
     initial_font_size -= 1;
-    show_the_quote()
+    show_the_quote(current_index)
 
 })
 
 
+
+previousButton.addEventListener('click', () => {
+
+    //alert(quotes[initial_category].length);
+    if (current_index < 1) {
+        alert('no more quote')
+    } else {
+        current_index -= 1
+        show_the_quote(current_index)
+    }
+
+
+
+})
+
+
+nextButton.addEventListener('click', () => {
+
+    if (current_index < quotes[initial_category].length - 1) {
+        current_index += 1
+        show_the_quote(current_index)
+
+    } else {
+        alert('nop more quote there')
+    }
+
+
+
+})
