@@ -171,8 +171,8 @@ darkModeButton.addEventListener('click', () => {
         document.body.style.backgroundColor = 'white';
         document.body.style.color = 'black';
         quoteContainer.style.backgroundColor = 'white';
-        darkModeButton.style.backgroundColor = 'white';
-        darkModeButton.style.color = 'black';
+        darkModeButton.style.backgroundColor = 'black';
+        darkModeButton.style.color = 'white';
 
         localStorage.setItem('mode', 'light');
     } else {
@@ -182,8 +182,8 @@ darkModeButton.addEventListener('click', () => {
         document.body.style.color = 'white';
         quoteContainer.style.backgroundColor = '#333';
         localStorage.setItem('mode', 'dark');
-        darkModeButton.style.backgroundColor = 'black';
-        darkModeButton.style.color = 'white';
+        darkModeButton.style.backgroundColor = 'white';
+        darkModeButton.style.color = 'black';
     }
 
 
