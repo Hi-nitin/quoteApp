@@ -102,9 +102,9 @@ decreaseBtn.addEventListener('click', () => {
 
 previousButton.addEventListener('click', () => {
 
-    //alert(quotes[current_category].length);
+
     if (current_index < 1) {
-        alert('no more quote')
+        alert('no more quote avilable')
     } else {
         current_index -= 1
         show_the_quote(current_index)
@@ -122,7 +122,7 @@ nextButton.addEventListener('click', () => {
         show_the_quote(current_index)
 
     } else {
-        alert('nop more quote there')
+        alert('no more quote avilable')
     }
 
 
