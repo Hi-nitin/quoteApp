@@ -11,7 +11,10 @@
 <body>
 
     <div class="main_container">
-        <div class="quote_container">
+        <div class="heading">
+           Quote generation 
+        </div>
+        <div class="quote_container" id="quoteBox">
 
 
             <div class="quote_menu">
@@ -20,7 +23,7 @@
                     <label for="quote_category">Select categories </label>
                     <br>
                     <select id="QuoteCategory" name="category_quote">
-                        <option value="science">All Categories</option>
+                        <option value="science">Science</option>
                         <option value="nature">Nature</option>
                         <option value="health">Health</option>
                     </select>
@@ -34,7 +37,7 @@
                 </div>
 
                 <div class="dark_mode">
-                    k
+                    <button id="darkmode">Dark mode</button>
                 </div>
             </div>
 
@@ -47,7 +50,7 @@
                 <button id="previous_btn">Previous Quote</button>
                 <button id="random_btn">Random Quote</button>
                 <button id="next_btn">Next Quote</button>
-                
+
             </div>
 
         </div>
