@@ -59,6 +59,7 @@ const randomButton = document.getElementById("random_btn");
 const darkModeButton = document.getElementById('darkmode');
 const quoteContainer = document.getElementById('quoteBox');
 
+
 current_index = 0;
 current_category = 'science';
 
@@ -138,18 +139,25 @@ randomButton.addEventListener('click', () => {
 
 })
 
+
+
+
 if (localStorage.getItem('mode') == 'dark') {
     darkModeButton.textContent = 'light mode';
     document.body.style.backgroundColor = '#121212';
     document.body.style.color = 'white';
     quoteContainer.style.backgroundColor = '#333';
+    darkModeButton.style.backgroundColor = 'white';
+    darkModeButton.style.color = 'black';
+
 } else {
 
     darkModeButton.textContent = 'dark mode';
     document.body.style.backgroundColor = 'white';
     document.body.style.color = 'black';
     quoteContainer.style.backgroundColor = 'white';
-
+    darkModeButton.style.backgroundColor = 'black';
+    darkModeButton.style.color = 'white';
 }
 
 
@@ -157,19 +165,25 @@ if (localStorage.getItem('mode') == 'dark') {
 darkModeButton.addEventListener('click', () => {
 
 
+
     if (localStorage.getItem('mode') === 'dark') {
         darkModeButton.textContent = 'light mode';
-        document.body.style.backgroundColor = '#121212';
-        document.body.style.color = 'white';
-        quoteContainer.style.backgroundColor = '#333';
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+        quoteContainer.style.backgroundColor = 'white';
+        darkModeButton.style.backgroundColor = 'white';
+        darkModeButton.style.color = 'black';
+
         localStorage.setItem('mode', 'light');
     } else {
 
         darkModeButton.textContent = 'dark mode';
-        document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'black';
-        quoteContainer.style.backgroundColor = 'white';
+        document.body.style.backgroundColor = '#121212';
+        document.body.style.color = 'white';
+        quoteContainer.style.backgroundColor = '#333';
         localStorage.setItem('mode', 'dark');
+        darkModeButton.style.backgroundColor = 'black';
+        darkModeButton.style.color = 'white';
     }
 
 
